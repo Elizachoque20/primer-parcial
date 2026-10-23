@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reto: formulario con JavaScript</title>
+</head>
+<body>
+  <main>
+    <h1>Registro</h1>
+    <form id="formulario" novalidate>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre">
+
+      <label for="tipoDoc">Tipo de documento</label>
+      <select id="tipoDoc" name="tipoDoc">
+        <option value="">-- Selecciona --</option>
+        <option value="cc">Cédula de ciudadanía</option>
+        <option value="ti">Tarjeta de identidad</option>
+        <option value="ce">Cédula de extranjería</option>
+        <option value="pasaporte">Pasaporte</option>
+      </select>
+
+      <label for="numeroDoc">Número de documento</label>
+      <input type="text" id="numeroDoc" name="numeroDoc" inputmode="numeric">
+
+      <div id="campoPais" style="display: none;">
+        <label for="pais">País de expedición</label>
+        <input type="text" id="pais" name="pais">
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="resultado" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
